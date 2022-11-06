@@ -89,7 +89,7 @@ export const SignUpScreen = () => {
             </Form.Group>
             <Form.Group className="d-grid">
               <Button variant="primary" type="submit" className="mt-4">
-                <Link className="text-white text-decoration-none" to="/auth">
+                <Link className="text-white text-decoration-none" to="/signin">
                   Sign Up
                 </Link>
               </Button>

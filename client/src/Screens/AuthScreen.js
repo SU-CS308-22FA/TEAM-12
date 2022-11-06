@@ -57,11 +57,7 @@ export const AuthScreen = ({setUser}) => {
         <Form.Label>Password</Form.Label>
         <Form.Control onChange={(e) => setFormData({...formData, password: e.target.value})} type="password" placeholder="Password" />
       </Form.Group>
-
-      <Form.Group className="mb-3" controlId="formBasicCheckbox">
-        <Form.Check type="checkbox" label="Check me out" />
-      </Form.Group>
-
+      
 
       <Form.Group className="d-grid">
               <Button disabled={formData.email==="" || formData.password===""} type="submit" variant="primary" size="lg">
