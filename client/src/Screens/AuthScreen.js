@@ -27,7 +27,7 @@ export const AuthScreen = ({setUser}) => {
       .then((res) => {
         localStorage.setItem('user', JSON.stringify(res.data.user))
         setUser(res.data.user);
-        navigate('/');
+        navigate(`/edit/${res.data.user._id}`);
       })
         .catch((err)=> {
           console.log(err.response.data);           

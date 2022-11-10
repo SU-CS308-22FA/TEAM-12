@@ -49,6 +49,15 @@ router.post("/signin", async (req,res)=>{
     }
 })
 
+router.delete("/edit/:id", async (req,res) => {
+    User.findByIdAndDelete(req.params.id).then(() => res.json('User deleted'))
+    .catch((err=>res.status(400).json("Error: "+err)))
+})
 
 
+router.put("/edit/:id", async(req,res)=>{
+    User.findByIdAndUpdate(req.params.id,{$set:req.body})
+    .then(() => res.json('User updated'))
+    .catch(err=>res.status(400).json('Error: '+err))
+})
 export default router;

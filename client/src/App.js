@@ -8,7 +8,7 @@ import { SignUpScreen } from './Screens/SignUpScreen';
 import { useState } from 'react';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-
+import { EditScreen } from './Screens/EditScreen'
 
 function App() {
   const[user,setUser] = useState(null);
@@ -21,6 +21,7 @@ function App() {
             <Route path="/" element={<HomeScreen user={user}/>} exact />
             <Route path="/signin" element={<AuthScreen setUser={setUser}/>} />
             <Route path="/signup" element={<SignUpScreen/>} />
+            <Route path="/edit/:id" element={<EditScreen user={user} setUser={setUser}/>} />
           </Routes>
         </Container>
       </main>
