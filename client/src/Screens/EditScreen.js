@@ -7,7 +7,6 @@ import Button from 'react-bootstrap/Button';
 export const EditScreen = ({user}) => {
     const [newuser, setUser] = useState({
         email: "",
-        password: ""
     })
 
 
