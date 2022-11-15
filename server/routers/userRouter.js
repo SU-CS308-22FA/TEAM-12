@@ -2,6 +2,7 @@ import express from "express";
 import mongoose from "mongoose";
 import bcrypt from 'bcryptjs'
 import User from '../models/userModel.js';
+import Match from '../models/matchModel.js';
 
 const router = express.Router();
 
@@ -40,24 +41,49 @@ router.post("/signin", async (req,res)=>{
             return res.status(400).json({message: "User does not exist"})
         
         const isPasswordCorrect = await bcrypt.compare(password, user.password)
-        if(!isPasswordCorrect)
+        if(user.userType!=="ADMIN"){
+            if(!isPasswordCorrect)
             return res.status(400).json({message: "Wrong Password"})
+        }
         
         return res.status(200).json({ user, message: 'Authentication successful' })
     } catch (error) {
         return res.status(400).json({ message: error.message })
     }
 })
-
+//delete user
 router.delete("/edit/:id", async (req,res) => {
     User.findByIdAndDelete(req.params.id).then(() => res.json('User deleted'))
     .catch((err=>res.status(400).json("Error: "+err)))
 })
 
-
+//update user
 router.put("/edit/:id", async(req,res)=>{
     User.findByIdAndUpdate(req.params.id,{$set:req.body})
     .then(() => res.json('User updated'))
     .catch(err=>res.status(400).json('Error: '+err))
 })
+
+
+
+router.post("/addmatch", async (req, res)=>{ 
+    try {
+        //console.log(req.body)
+        const { homeTeam, awayTeam, referee, date, score } = req.body;
+         
+        const createdMatch = await Match.create({
+            homeTeam,
+            awayTeam,
+            referee,
+            date,
+            score
+        })
+
+        return res.status(201).json(createdMatch);
+    } catch (error) {
+        console.log(error)
+        return res.json({message: "Create match failed"})
+    }
+})
+
 export default router;

@@ -26,8 +26,14 @@ export const AuthScreen = ({setUser}) => {
       login(formData)
       .then((res) => {
         localStorage.setItem('user', JSON.stringify(res.data.user))
-        setUser(res.data.user);
-        navigate(`/edit/${res.data.user._id}`);
+        setUser(res.data.user);       
+        console.log(res.data.user)
+        if(res.data.user.userType==="USER"){
+          navigate(`/edit/${res.data.user._id}`);
+        }
+        else{
+          navigate("/adminpanel");
+        }
       })
         .catch((err)=> {
           console.log(err.response.data);           
