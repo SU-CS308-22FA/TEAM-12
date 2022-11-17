@@ -18,10 +18,10 @@ const matchSchema = mongoose.Schema({
         type: String,
         required:true
     },
-    score: {
+    score:{
         type: String,
-        default:""
-    }
+        default:'-'
+    },
 })
 
 export default mongoose.model('Match', matchSchema)

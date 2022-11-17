@@ -17,7 +17,7 @@ export const AdminScreen = () => {
   
   return (
     <Container>
-      <a href="/addmatch" class="btn btn-info" role="button">Add Match</a>
+      <a href="/addmatch" className="btn btn-info" role="button">Add Match</a>
     </Container>
   );
 }

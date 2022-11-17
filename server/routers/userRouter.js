@@ -78,7 +78,6 @@ router.post("/addmatch", async (req, res)=>{
             date,
             score
         })
-
         return res.status(201).json(createdMatch);
     } catch (error) {
         console.log(error)

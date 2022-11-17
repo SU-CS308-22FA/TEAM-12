@@ -27,19 +27,7 @@ export const AddMatchScreen = () => {
                   navigate("/adminpanel");
                 })
                 .catch((err) => {
-                  console.log(err.response.data);           
-                  let message = err.response.data.message;         
-                  toast("❌"+message,
-                  {
-                    position: "top-center",
-                    autoClose: 3000,
-                    hideProgressBar: false,
-                    closeOnClick: true,
-                    pauseOnHover: true,
-                    draggable: true,
-                    progress: undefined,
-                    theme: "colored",
-                  });
+                  console.log(err.response.data);                                      
                 });
             }}
           >
@@ -81,19 +69,8 @@ export const AddMatchScreen = () => {
                 onChange={(e) =>
                   setFormData({ ...formData, date: e.target.value })
                 }
-                type="datetime-local"
+                type="date"
                 placeholder="Enter the date of the match"
-              />
-            </Form.Group>
-
-            <Form.Group className="mb-3" controlId="formBasicScore">
-              <Form.Label>Score</Form.Label>
-              <Form.Control
-                onChange={(e) =>
-                  setFormData({ ...formData, score: e.target.value })
-                }
-                type="score"
-                placeholder="Enter the score of the match"
               />
             </Form.Group>
 
