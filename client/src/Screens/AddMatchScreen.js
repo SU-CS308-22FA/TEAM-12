@@ -12,7 +12,7 @@ export const AddMatchScreen = () => {
     awayTeam: "",
     referee: "",
     date: "",
-    score: ""
+    score: "-"
   });
   return (
     <Container>

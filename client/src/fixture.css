@@ -1,0 +1,46 @@
+
+
+li {
+    margin-bottom: 40px;
+}
+li {
+    display: list-item;
+    text-align: -webkit-match-parent;
+}
+
+
+li .head {
+    background: #121212;
+    font-size: 0.9rem;
+    display: flex;
+    justify-content: space-between;
+    color: #fff;
+    padding: 10px;
+}
+
+li .head .date {
+    float: right;
+    color: #01d099;
+}
+
+li .head .referee {
+    align-items: center;
+    color: #01d099;
+}
+
+
+li .goals-result {
+    background: #222;
+    padding: 15px 10px;
+    display: flex;
+    justify-content: space-between;
+}
+
+li a {
+    font-size: 0.9rem;
+    color: #fff;
+}
+
+li .goals {
+    color: #fff;
+}

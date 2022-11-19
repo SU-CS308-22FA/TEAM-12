@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import axios from 'axios'
 import { Link } from 'react-router-dom'
+import '../fixture.css'
 
 export const FixtureScreen = () => {
     const [matches, setMatches] = useState([ ])
@@ -12,14 +13,29 @@ export const FixtureScreen = () => {
 
     return (
         <div>
-            <h1>List of Matches</h1>
             <ul style={{listStyleType:"none"}}>
                 {matches.map(match => {
-                    return (<li>{match.awayTeam}-{match.homeTeam}</li>)
+                    return (
+                    <li>
+                        <span class="head">
+                            {match.homeTeam} Vs {match.awayTeam}
+                            <span class="referee">{match.referee}</span>
+                            <span class="date">{match.date}</span>
+                        </span>
+                        <div class="goals-result">
+                            <a>{match.homeTeam}</a>
+                            <span class="goals">{match.score}</span>
+                            <a>{match.awayTeam}</a>
+                        </div>
+                    </li>
+                    )
                 })}
             </ul>
         </div>
     )
 }
+
+
+
 
 export default FixtureScreen;
