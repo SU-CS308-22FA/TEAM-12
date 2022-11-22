@@ -12,6 +12,9 @@ import 'react-toastify/dist/ReactToastify.css';
 import { EditScreen } from './Screens/EditScreen'
 import { AddMatchScreen } from './Screens/AddMatchScreen'
 import { FixtureScreen } from './Screens/FixtureScreen'
+import { AddRefereeScreen } from './Screens/AddRefereeScreen';
+import { StatsScreen } from './Screens/StatsScreen';
+import {RefereeProfile} from './Screens/RefereeProfile';
 
 function App() {
   const[user,setUser] = useState(null);
@@ -21,13 +24,16 @@ function App() {
       <main className='py-3'>
         <Container>
           <Routes>
-            <Route path="/" element={<HomeScreen user={user}/>} exact />
+            <Route path="/home" element={<HomeScreen user={user}/>} exact />
             <Route path="/signin" element={<AuthScreen setUser={setUser}/>} />
             <Route path="/signup" element={<SignUpScreen/>} />
             <Route path="/edit/:id" element={<EditScreen user={user} setUser={setUser}/>} />
             <Route path="/adminpanel" element={<AdminScreen/>} />
             <Route path="/addmatch" element={<AddMatchScreen/>} />
+            <Route path="/addreferee" element={<AddRefereeScreen/>} />
             <Route path="/matches" element={<FixtureScreen/>} />
+            <Route path="/referees" element={<StatsScreen/>} />
+            <Route path="/refereeProfile" element={<RefereeProfile/>} />
           </Routes>
         </Container>
       </main>

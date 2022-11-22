@@ -3,6 +3,7 @@ import mongoose from "mongoose";
 import bcrypt from 'bcryptjs'
 import User from '../models/userModel.js';
 import Match from '../models/matchModel.js';
+import Referee from '../models/refereeModel.js';
 
 const router = express.Router();
 
@@ -82,6 +83,26 @@ router.post("/addmatch", async (req, res)=>{
     } catch (error) {
         console.log(error)
         return res.json({message: "Create match failed"})
+    }
+})
+
+router.post("/addreferee", async (req, res)=>{ 
+    try {
+        //console.log(req.body)
+        const { refName, refSurname, matchNum, rcpg, ycpg, offsidepg } = req.body;
+         
+        const createdReferee = await Referee.create({
+            refName, 
+            refSurname,
+            matchNum,
+            rcpg,
+            ycpg,
+            offsidepg
+        })
+        return res.status(201).json(createdReferee);
+    } catch (error) {
+        console.log(error)
+        return res.json({message: "Create referee failed"})
     }
 })
 

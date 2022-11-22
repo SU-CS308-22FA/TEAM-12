@@ -9,3 +9,5 @@ export const login = async (formData)=> await HTTP.post('/users/signin', formDat
 export const register = async (formData) => await HTTP.post("/users/signup", formData);
 
 export const matchAdd = async (formData) => await HTTP.post("/users/addmatch", formData);
+
+export const refereeAdd = async (formData) => await HTTP.post("/users/addreferee", formData);

@@ -12,12 +12,14 @@ import {
 import { toast } from 'react-toastify'
 import { login } from '../axios';
 
+
 export const AdminScreen = () => {
   const navigate = useNavigate();
   
   return (
     <Container>
       <a href="/addmatch" className="btn btn-info" role="button">Add Match</a>
+      <a href="/addreferee" className="btn btn-info" role="button">Add Referee</a>
     </Container>
   );
 }
