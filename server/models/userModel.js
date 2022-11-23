@@ -19,9 +19,11 @@ const userSchema = mongoose.Schema({
         enum: ['USER','ADMIN'],
         default: 'USER'
     },
-    phoneNumber: {
+    favClub: {
         type: String,
-        required: true
+    },
+    favRef: {
+        type: String,
     },
 })
 
