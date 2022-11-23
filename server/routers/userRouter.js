@@ -10,7 +10,7 @@ const router = express.Router();
 router.post("/signup", async (req, res)=>{ 
     try {
         //console.log(req.body)
-        const { fullname, password, phoneNumber, email } = req.body;
+        const { fullname, password, favClub, email, favRef } = req.body;
         
         const userExists = await User.findOne({ email })
         if(userExists)
@@ -22,7 +22,8 @@ router.post("/signup", async (req, res)=>{
             fullname,
             email,
             password: hashedPassword,
-            phoneNumber
+            favClub,
+            favRef,
         })
 
         return res.status(201).json(createdUser);
