@@ -12,6 +12,8 @@ import 'react-toastify/dist/ReactToastify.css';
 import { EditScreen } from './Screens/EditScreen'
 import { AddMatchScreen } from './Screens/AddMatchScreen'
 import { FixtureScreen } from './Screens/FixtureScreen'
+import {EditFixtureScreen} from './Screens/EditFixtureScreen'
+import {EditMatchScreen} from './Screens/EditMatchScreen'
 
 function App() {
   const[user,setUser] = useState(null);
@@ -28,6 +30,8 @@ function App() {
             <Route path="/adminpanel" element={<AdminScreen/>} />
             <Route path="/addmatch" element={<AddMatchScreen/>} />
             <Route path="/matches" element={<FixtureScreen/>} />
+            <Route path="/matches/editfixture" element={<EditFixtureScreen/>} />
+            <Route path="/matches/editfixture/:id" element={<EditMatchScreen/>} />
           </Routes>
         </Container>
       </main>
