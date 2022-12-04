@@ -45,9 +45,14 @@ export const EditMatchScreen = () => {
             <Button className="btn1" onClick={matchUpdate}>Update Match</Button>
             <Button className="btn2" onClick={matchDelete}>Delete Match</Button>           
         </div>
-        <a href="/matches/editfixture" className="btn3" role="button">Back to Edit Fixture Page</a>
 
-    
+        <div class="anchorContainer">
+            <a href="/matches/editfixture" role="button">Edit Fixture Page</a>
+        </div>
+        <div class="anchorContainer">
+            <a href="/adminpanel" role="button">Admin Panel</a>
+        </div>
+        
     </div>
   );
 }
