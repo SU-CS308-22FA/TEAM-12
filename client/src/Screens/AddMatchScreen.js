@@ -84,7 +84,11 @@ export const AddMatchScreen = () => {
           </Form>
         </Col>
       </Row>
+      <div>
+        <a href="/adminpanel" role="button">Admin Panel</a>
+      </div>
     </Container>
+    
   );
 };
 
