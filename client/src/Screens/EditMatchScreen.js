@@ -3,6 +3,7 @@ import axios from 'axios';
 import Button from 'react-bootstrap/Button';
 import { useEffect } from 'react';
 import { useParams } from 'react-router-dom';
+import '../center.css'
 
 export const EditMatchScreen = () => {
 
@@ -38,12 +39,13 @@ export const EditMatchScreen = () => {
     }
   return (
     <div>
-        <label>Score: </label>
-        <input type="text" name="score" value={newmatch.score} required onChange={handleChange}/><br/>
-
-        <Button className='btn btn-warning' onClick={matchUpdate}>Update Match</Button>
-        <Button className='btn btn-danger' onClick={matchDelete}>Delete Match</Button>
-        
+        <div class="input">
+            <label>Score: </label>        
+            <input type="text" name="score" size="25" value={newmatch.score} required onChange={handleChange}/><br/>
+            <Button className="btn1" onClick={matchUpdate}>Update Match</Button>
+            <Button className="btn2" onClick={matchDelete}>Delete Match</Button>
+        </div>
+    
     </div>
   );
 }
