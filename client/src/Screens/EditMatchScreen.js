@@ -43,8 +43,10 @@ export const EditMatchScreen = () => {
             <label>Score: </label>        
             <input type="text" name="score" size="25" value={newmatch.score} required onChange={handleChange}/><br/>
             <Button className="btn1" onClick={matchUpdate}>Update Match</Button>
-            <Button className="btn2" onClick={matchDelete}>Delete Match</Button>
+            <Button className="btn2" onClick={matchDelete}>Delete Match</Button>           
         </div>
+        <a href="/matches/editfixture" className="btn3" role="button">Back to Edit Fixture Page</a>
+
     
     </div>
   );
