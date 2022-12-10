@@ -39,6 +39,7 @@ li .goals-result {
 li a {
     font-size: 0.9rem;
     color: #fff;
+    text-decoration: none;
 }
 
 li .goals {

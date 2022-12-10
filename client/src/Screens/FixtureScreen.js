@@ -18,7 +18,7 @@ export const FixtureScreen = () => {
                     return (
                     <li>
                         <span class="head">
-                            {match.homeTeam} Vs {match.awayTeam}
+                            <a key={match._id}><Link to={`${match._id}`}>{match.homeTeam} Vs {match.awayTeam}</Link></a>
                             <span class="referee">{match.referee}</span>
                             <span class="date">{match.date}</span>
                         </span>
