@@ -22,6 +22,10 @@ const matchSchema = mongoose.Schema({
         type: String,
         default:'-'
     },
+    comments:{
+        type:[String],
+        default:[]
+    }
 })
 
 export default mongoose.model('Match', matchSchema)

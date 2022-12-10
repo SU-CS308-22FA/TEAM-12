@@ -4,9 +4,12 @@ import Button from 'react-bootstrap/Button';
 import { useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import '../center.css'
+import { useNavigate } from 'react-router-dom';
+import { toast } from 'react-toastify'
 
 export const EditMatchScreen = () => {
 
+    const navigate = useNavigate();
     const {id} = useParams();
 
     const [newmatch, setMatch] = useState({
@@ -20,12 +23,44 @@ export const EditMatchScreen = () => {
 
     const matchUpdate = () => {
         axios.put(`http://localhost:5000/matches/editfixture/${id}`, newmatch)
-        .then((match) => console.log(match))
+        .then((match) => {
+            console.log(match)
+            let message = " Updated Successfully";         
+            toast("✔️"+message,
+                {
+                position: "top-center",
+                autoClose: 1000,
+                hideProgressBar: false,
+                closeOnClick: true,
+                pauseOnHover: true,
+                draggable: true,
+                progress: undefined,
+                theme: "colored",
+                });    
+            navigate("/matches/editfixture")
+        })
+           
     }
 
     const matchDelete = () => {
         axios.delete(`http://localhost:5000/matches/editfixture/${id}`)
-        .then((res) => console.log(res.status))
+        .then((res) => {
+            console.log(res.status)
+            let message = " Deleted Successfully";         
+            toast("✔️"+message,
+                {
+                position: "top-center",
+                autoClose: 1000,
+                hideProgressBar: false,
+                closeOnClick: true,
+                pauseOnHover: true,
+                draggable: true,
+                progress: undefined,
+                theme: "colored",
+                });    
+            navigate("/matches/editfixture")   
+        })
+            
     }
 
     const handleChange = (e) => {

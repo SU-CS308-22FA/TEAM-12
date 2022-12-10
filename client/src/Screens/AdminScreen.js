@@ -11,14 +11,19 @@ import {
 } from "react-router-dom";
 import { toast } from 'react-toastify'
 import { login } from '../axios';
+import '../center.css'
 
 export const AdminScreen = () => {
   const navigate = useNavigate();
   
   return (
     <Container>
-      <a href="/addmatch" className="btn btn-info" role="button">Add Match</a>
-      <a href="/matches/editfixture" className="btn btn-info" role="button">Edit Fixture</a>
+      <div class="anchorContainer">
+        <a href="/addmatch" className="btn btn-info" role="button">Add Match</a>
+      </div>
+      <div class="anchorContainer">
+        <a href="/matches/editfixture" className="btn btn-info" role="button">Edit Fixture</a>
+      </div>
     </Container>
   );
 }
