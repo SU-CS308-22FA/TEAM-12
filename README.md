@@ -64,6 +64,23 @@ To learn React, check out the [React documentation](https://reactjs.org/).
 
 # How to Obtain the Source Code
 
-Source code can be directly obtained by using the command git clone
+Source code can be directly obtained by using the command git clone <repo link> .
+
+# File Structure
+
+Project contains two main folders:
+Server - The folder for backend.
+Client - The folder for frontend.
+
+The structure of Server Folder:
+controllers -> contains the comment function
+models -> contains the mongoose models 
+routers -> contains the implementations of the CRUD operations
+
+The Structure of the Client Folder:
+src -> contains the main files that were used while coding the frontend of the website
+components -> includes the comment section functionality and the header of the website
+screens -> contains the implementations of all the screens of the website
+axios -> contains the folders that send HTTP requests to the backend
 
 
