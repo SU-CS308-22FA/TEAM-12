@@ -1,0 +1,28 @@
+.tablesize{
+    width:fit-content;
+    
+}
+.parent {
+    
+    margin: 1rem;
+    padding: 2rem 2rem;
+    
+  }
+.child {
+    display: inline-block;
+    
+    padding: 1rem 1rem;
+    vertical-align:text-top;
+  }
+table {
+    width: 100% !important;
+}
+
+.accordion {
+    width: 100% ;
+    padding-left: 2.1%;
+}
+
+.tabtab{
+    padding-left: 4%;
+}

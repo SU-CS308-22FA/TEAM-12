@@ -24,6 +24,9 @@ export const AdminScreen = () => {
       <div class="anchorContainer">
         <a href="/matches/editfixture" className="btn btn-info" role="button">Edit Fixture</a>
       </div>
+      <div class="anchorContainer">
+      <a href="/addreferee" className="btn btn-info" role="button">Add Referee</a>
+      </div>
     </Container>
   );
 }
