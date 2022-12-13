@@ -18,6 +18,7 @@ import {MatchScreen} from './Screens/MatchScreen'
 import { StatsScreen } from './Screens/StatsScreen';
 import {RefereeProfile} from './Screens/RefereeProfile';
 import { AddRefereeScreen } from './Screens/AddRefereeScreen'
+import {UserProfile} from './Screens/UserProfile'
 
 function App() {
   const[user,setUser] = useState(null);
@@ -40,6 +41,7 @@ function App() {
             <Route path="/addreferee" element={<AddRefereeScreen/>} />
             <Route path="/referees" element={<StatsScreen/>} />
             <Route path="/refereeProfile" element={<RefereeProfile/>} />
+            <Route path="/userProfile" element={<UserProfile user={user}/>} exact />
           </Routes>
         </Container>
       </main>
