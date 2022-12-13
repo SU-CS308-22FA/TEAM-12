@@ -15,6 +15,9 @@ import { FixtureScreen } from './Screens/FixtureScreen'
 import {EditFixtureScreen} from './Screens/EditFixtureScreen'
 import {EditMatchScreen} from './Screens/EditMatchScreen'
 import {MatchScreen} from './Screens/MatchScreen'
+import { StatsScreen } from './Screens/StatsScreen';
+import {RefereeProfile} from './Screens/RefereeProfile';
+import { AddRefereeScreen } from './Screens/AddRefereeScreen'
 
 function App() {
   const[user,setUser] = useState(null);
@@ -34,6 +37,9 @@ function App() {
             <Route path="/matches/editfixture" element={<EditFixtureScreen/>} />
             <Route path="/matches/editfixture/:id" element={<EditMatchScreen/>} />
             <Route path="/matches/:id" element={<MatchScreen user={user}/>} />
+            <Route path="/addreferee" element={<AddRefereeScreen/>} />
+            <Route path="/referees" element={<StatsScreen/>} />
+            <Route path="/refereeProfile" element={<RefereeProfile/>} />
           </Routes>
         </Container>
       </main>
