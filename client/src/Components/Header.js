@@ -27,6 +27,7 @@ const Header = ({user, setUser}) => {
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto">
             <Nav.Link href="#home">Home</Nav.Link>
+            <Nav.Link href="/UserProfile">Profile</Nav.Link>
             <Nav.Link href="/matches">Fixture</Nav.Link>
             <Nav.Link href="/referees">Stats</Nav.Link>
             <Nav.Link href="/refereeProfile">Referee</Nav.Link>
