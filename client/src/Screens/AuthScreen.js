@@ -29,7 +29,7 @@ export const AuthScreen = ({setUser}) => {
         setUser(res.data.user);       
         console.log(res.data.user)
         if(res.data.user.userType==="USER"){
-          navigate(`/edit/${res.data.user._id}`);
+          navigate("/UserProfile");
         }
         else{
           navigate("/adminpanel");
