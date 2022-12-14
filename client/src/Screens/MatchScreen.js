@@ -23,7 +23,7 @@ export const MatchScreen = ({user}) => {
 
         </div>
     )
-}
+};
 
 
 

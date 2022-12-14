@@ -10,8 +10,6 @@ export const UserProfile = ({ user }) => {
         email: "",
     })
     
-
-
         /**
      * This function is called when the "Update User" button is clicked. 
      * It shows successfully changed message if user decide to take available mail and updates his/her credential. This function has a communication with db. 

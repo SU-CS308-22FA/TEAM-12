@@ -11,7 +11,7 @@ const RefereeDis = () => {
     const {id} = useParams();
 
     useEffect(() => {
-        axios.get(`${process.env.REACT_APP_API_URL}/referees/${id}`)
+        axios.get(`http://localhost:5000/referees/${id}`)
         .then(response => setReferee(response.data))
     }, [])
 
