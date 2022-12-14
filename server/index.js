@@ -3,9 +3,10 @@ import dotenv from "dotenv";
 import mongoose from "mongoose";
 import cors from "cors";
 import path from "path";
-import userRouter from "./Routers/userRouter.js";
-import matchRouter from "./Routers/matchRouter.js";
-import refereeRouter from "./Routers/refereeRouter.js";
+import { userRouter } from "./Routers/userRouter.js";
+import { matchRouter } from "./Routers/matchRouter.js";
+import { refereeRouter } from "./Routers/refereeRouter.js";
+
 dotenv.config();
 
 const __dirname = path.resolve();
