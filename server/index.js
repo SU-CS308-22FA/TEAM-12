@@ -1,11 +1,11 @@
+import path from "path";
 import express  from "express";
 import dotenv from "dotenv";
 import mongoose from "mongoose";
 import cors from "cors";
-import path from "path";
-import { userRouter } from "./Routers/userRouter.js";
-import { matchRouter } from "./Routers/matchRouter.js";
-import { refereeRouter } from "./Routers/refereeRouter.js";
+import userRouter from "./routers/userRouter.js";
+import matchRouter from "./routers/matchRouter.js";
+import refereeRouter from "./routers/refereeRouter.js";
 
 dotenv.config();
 
