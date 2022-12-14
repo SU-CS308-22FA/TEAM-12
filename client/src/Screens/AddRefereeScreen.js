@@ -13,7 +13,11 @@ export const AddRefereeScreen = () => {
     matchNum: "",
     rcpg:"",
     ycpg:"",
-    offsidepg:""
+    offsidepg:"",
+    assist1:"",
+    assist2:"",
+    assist3:"",
+    assist4:""
     
   });
   return (
@@ -94,6 +98,46 @@ export const AddRefereeScreen = () => {
                 }
                 type="offsidepg"
                 placeholder="Enter offside per game"
+              />
+            </Form.Group>
+            <Form.Group className="mb-3" controlId="Assistant">
+              <Form.Label>Assistant Referee</Form.Label>
+              <Form.Control
+                onChange={(e) =>
+                  setFormData({ ...formData, assist1: e.target.value })
+                }
+                type="assist"
+                placeholder="Enter assistent referee"
+              />
+            </Form.Group>
+            <Form.Group className="mb-3" controlId="Assistant">
+              <Form.Label>Assistant Referee</Form.Label>
+              <Form.Control
+                onChange={(e) =>
+                  setFormData({ ...formData, assist2: e.target.value })
+                }
+                type="assist"
+                placeholder="Enter assistent referee"
+              />
+            </Form.Group>
+            <Form.Group className="mb-3" controlId="Assistant">
+              <Form.Label>Assistant Referee</Form.Label>
+              <Form.Control
+                onChange={(e) =>
+                  setFormData({ ...formData, assist3: e.target.value })
+                }
+                type="assist"
+                placeholder="Enter assistent referee"
+              />
+            </Form.Group>
+            <Form.Group className="mb-3" controlId="Assistant">
+              <Form.Label>Assistant Referee</Form.Label>
+              <Form.Control
+                onChange={(e) =>
+                  setFormData({ ...formData, assist4: e.target.value })
+                }
+                type="assist"
+                placeholder="Enter assistent referee"
               />
             </Form.Group>
             <Form.Group className="d-grid">

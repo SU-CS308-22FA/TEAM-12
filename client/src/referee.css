@@ -1,0 +1,23 @@
+.referee-dis {
+    width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+  }
+  
+  .referee-info {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .referee-info h2 {
+    margin-top: 10px;
+  }
+  
+  .referee-info p {
+    margin: 0;
+    margin-left: 10px;
+  }
+  

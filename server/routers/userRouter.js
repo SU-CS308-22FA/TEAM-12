@@ -90,7 +90,7 @@ router.post("/addmatch", async (req, res)=>{
 router.post("/addreferee", async (req, res)=>{ 
     try {
         //console.log(req.body)
-        const { refName, refSurname, matchNum, rcpg, ycpg, offsidepg } = req.body;
+        const { refName, refSurname, matchNum, rcpg, ycpg, offsidepg, assist1,assist2,assist3,assist4 } = req.body;
          
         const createdReferee = await Referee.create({
             refName, 
@@ -98,7 +98,8 @@ router.post("/addreferee", async (req, res)=>{
             matchNum,
             rcpg,
             ycpg,
-            offsidepg
+            offsidepg,
+            assist1,assist2,assist3,assist4
         })
         return res.status(201).json(createdReferee);
     } catch (error) {
