@@ -1,11 +1,11 @@
 import express  from "express";
 import dotenv from "dotenv";
 import mongoose from "mongoose";
-//import userRouter from "./Routers/userRouter.js";
-import matchRouter from "./Routers/matchRouter.js";
-import refereeRouter from "./Routers/refereeRouter.js";
 import cors from "cors";
 import path from "path";
+import userRouter from "./Routers/userRouter.js";
+import matchRouter from "./Routers/matchRouter.js";
+import refereeRouter from "./Routers/refereeRouter.js";
 dotenv.config();
 
 const __dirname = path.resolve();
