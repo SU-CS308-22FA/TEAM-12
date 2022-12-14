@@ -7,7 +7,7 @@ export const FixtureScreen = () => {
     const [matches, setMatches] = useState([ ])
 
     useEffect(() => {
-        axios.get('http://localhost:5000/matches')
+        axios.get(`${process.env.REACT_APP_API_URL}/matches/`)
         .then(response => setMatches(response.data))
     }, [])
 
