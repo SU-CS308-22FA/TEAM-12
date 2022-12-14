@@ -12,7 +12,10 @@ export const UserProfile = ({ user }) => {
     
 
 
-
+        /**
+     * This function is called when the "Update User" button is clicked. 
+     * It shows successfully changed message if user decide to take available mail and updates his/her credential. This function has a communication with db. 
+     */
     const userUpdate = () => {
         axios.put('http://localhost:5000/users/edit/'+user._id, newuser)
         .then((user) => console.log(user))
@@ -29,7 +32,10 @@ export const UserProfile = ({ user }) => {
                 theme: "colored",
                 });    
     }
-
+        /**
+     * This function is called when the "Delete User" button is clicked. 
+     * It shows successfully deleted message if user decide to delete his/her account. This function has a communication with db. 
+     */
     const userDelete = () => {
         axios.delete('http://localhost:5000/users/edit/'+user._id)
         .then((res) => console.log(res.status))
