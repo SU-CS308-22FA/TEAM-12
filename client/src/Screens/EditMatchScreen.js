@@ -21,6 +21,10 @@ export const EditMatchScreen = () => {
         .then(response => setMatch(response.data))
     }, [])
 
+/**
+ * This function is called when the "Update Match" button is clicked. 
+ * It sends the "newmatch" which is the update match to the database. 
+ */
     const matchUpdate = () => {
         axios.put(`http://localhost:5000/matches/editfixture/${id}`, newmatch)
         .then((match) => {
@@ -42,6 +46,10 @@ export const EditMatchScreen = () => {
            
     }
 
+/**
+ * This function is called when the "Delete Match" button is clicked. 
+ * It sends a request to the backend with the unique url of the website which contains the matches unique id. With this id the backend is able to delete the match.
+ */
     const matchDelete = () => {
         axios.delete(`http://localhost:5000/matches/editfixture/${id}`)
         .then((res) => {
