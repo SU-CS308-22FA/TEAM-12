@@ -25,6 +25,22 @@ const refereeSchema = mongoose.Schema({
     offsidepg:{
         type: String,
         required:true
+    },
+    assist1:{
+        type: String,
+        required:true
+    },
+    assist2:{
+        type: String,
+        required:true
+    },
+    assist3:{
+        type: String,
+        required:true
+    },
+    assist4:{
+        type: String,
+        required:true
     }
 })
 
