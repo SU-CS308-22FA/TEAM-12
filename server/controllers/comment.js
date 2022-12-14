@@ -1,6 +1,5 @@
 import express from 'express';
 import mongoose from 'mongoose';
-
 import Match from '../models/matchModel.js';
 
 const router = express.Router();
