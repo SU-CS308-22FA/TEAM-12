@@ -13,7 +13,7 @@ export const MatchScreen = ({user}) => {
     })
 
     useEffect(() => {
-        axios.get(`http://localhost:5000/matches/${id}`)
+        axios.get(`${process.env.REACT_APP_API_URL}/matches/${id}`)
         .then(response => setMatch(response.data))
     }, [])
 
