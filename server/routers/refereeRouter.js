@@ -13,5 +13,11 @@ router.get('/', (req, res) => {
     .catch(err => res.status(400).json('Error: '+err))
 })
 
+router.get('/:id', (req, res) => {
+    Referee.findById(req.params.id)
+    .then(referees => res.json(referees))
+    .catch(err => res.json('Error: +err'))
+})
+
 
 export default router;
