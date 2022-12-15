@@ -51,7 +51,7 @@ export const EditMatchScreen = () => {
  * It sends a request to the backend with the unique url of the website which contains the matches unique id. With this id the backend is able to delete the match.
  */
     const matchDelete = () => {
-        axios.delete(`http://localhost:5000/matches/editfixture/${id}`)
+        axios.delete(`${process.env.REACT_APP_API_URL}/matches/editfixture/${id}`)
         .then((res) => {
             console.log(res.status)
             let message = " Deleted Successfully";         

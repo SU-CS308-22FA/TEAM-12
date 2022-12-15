@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import axios from 'axios'
 import { useParams } from 'react-router-dom';
-
 import CommentSection from '../Components/CommentSection.js';
 
 export const MatchScreen = ({user}) => {
@@ -13,7 +12,7 @@ export const MatchScreen = ({user}) => {
     })
 
     useEffect(() => {
-        axios.get(`http://localhost:5000/matches/${id}`)
+        axios.get(`${process.env.REACT_APP_API_URL}/matches/${id}`)
         .then(response => setMatch(response.data))
     }, [])
 
@@ -23,7 +22,7 @@ export const MatchScreen = ({user}) => {
 
         </div>
     )
-}
+};
 
 
 

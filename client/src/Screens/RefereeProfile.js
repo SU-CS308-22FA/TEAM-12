@@ -13,7 +13,7 @@ export const RefereeProfile = () => {
     const {id} = useParams();
 
     useEffect(() => {
-        axios.get(`http://localhost:5000/referees/${id}`)
+        axios.get(`${process.env.REACT_APP_API_URL}/referees/${id}`)
         .then(response => setReferee(response.data))
     }, [])
   return(

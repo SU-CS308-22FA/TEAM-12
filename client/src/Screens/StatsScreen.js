@@ -8,7 +8,7 @@ export const StatsScreen = () => {
     const [referees, setReferees] = useState([ ])
 
     useEffect(() => {
-        axios.get('http://localhost:5000/referees')
+        axios.get(`${process.env.REACT_APP_API_URL}/referees/`)
         .then(response => setReferees(response.data))
     }, [])
 
