@@ -5,9 +5,6 @@ import '../fixture.css'
 import Button from 'react-bootstrap/Button';
 
 
-
-
-
 export const EditFixtureScreen = ({}) => {
 
     const [matches, setMatches] = useState([ ])
