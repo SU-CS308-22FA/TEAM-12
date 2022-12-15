@@ -37,3 +37,5 @@ export const FixtureScreen = () => {
 
 
 
+
+export default FixtureScreen;

@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import axios from 'axios'
 import { useParams } from 'react-router-dom';
-
 import CommentSection from '../Components/CommentSection.js';
 
 export const MatchScreen = ({user}) => {
