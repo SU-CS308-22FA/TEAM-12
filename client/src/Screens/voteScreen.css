@@ -1,0 +1,17 @@
+.center{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+
+input[type="radio"]{
+    display:none;
+}
+
+.star{
+    cursor:pointer;
+    transition: color 200ms;
+}

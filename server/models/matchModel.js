@@ -25,7 +25,16 @@ const matchSchema = mongoose.Schema({
     comments:{
         type:[String],
         default:[]
+    },
+    refRating:{
+        type: Number,
+        default: 5
+    },
+    voteNum:{
+        type: Number,
+        default: 1
     }
+
 })
 
 export default mongoose.model('Match', matchSchema)

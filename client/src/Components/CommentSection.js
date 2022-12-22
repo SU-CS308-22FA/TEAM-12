@@ -35,7 +35,7 @@ const CommentSection = ({match,user,id}) => {
                     <div class="d-flex align-items-center justify-content-center mx-4">
                         <div class="d-flex align-items-center pe-3 pe-md-5">
                             <div class="ps-2 ps-md-3">
-                                <div class="live-score-detail-head_whistle-name__1rOgG">{match.referee}</div>
+                                <div class="live-score-detail-head_whistle-name__1rOgG">{match.referee} - Current Match Rating: {match.refRating}/5</div>
                             </div>
                         </div>
                     </div>
