@@ -33,6 +33,14 @@ const matchSchema = mongoose.Schema({
     voteNum:{
         type: Number,
         default: 1
+    },
+    homeTeamURL:{
+        type: String,
+        required:true
+    },
+    awayTeamURL:{
+        type: String,
+        required:true
     }
 
 })

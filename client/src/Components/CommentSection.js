@@ -19,7 +19,10 @@ const CommentSection = ({match,user,id}) => {
 
               <div class="d-flex align-items-start justify-content-around">
                   <a class="text-decoration-none text-body d-flex flex-column align-items-center text-center col-4" >
-                      <div class="live-score-detail-head_team-name__lfA8k fw-bold pt-2">{match.homeTeam}</div>
+                      <div class="live-score-detail-head_team-name__lfA8k fw-bold pt-2">
+                        <img src={match.homeTeamURL} alt="Girl in a jacket" width="70" height="70"></img> &nbsp; &nbsp; &nbsp;
+                        {match.homeTeam}
+                      </div>
                   </a>
                   <div class="d-flex flex-column align-items-center px-4 col-4">
                       <div class="d-flex align-items-center pt-md-3 ">
@@ -28,7 +31,10 @@ const CommentSection = ({match,user,id}) => {
                       <div class="d-flex align-items-center"></div>   
                   </div>
                       <a class="text-decoration-none text-body d-flex flex-column align-items-center text-center col-4" >
-                          <div class="live-score-detail-head_team-name__lfA8k fw-bold pt-2">{match.awayTeam}</div>
+                          <div class="live-score-detail-head_team-name__lfA8k fw-bold pt-2">
+                            {match.awayTeam} &nbsp; &nbsp; &nbsp;
+                          <img src={match.awayTeamURL} alt="Girl in a jacket" width="70" height="70"></img>   
+                          </div>
                       </a>
               </div>
               <div class="live-score-detail-head_bottom__3xxcF">

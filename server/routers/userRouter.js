@@ -71,14 +71,16 @@ router.put("/edit/:id", async(req,res)=>{
 router.post("/addmatch", async (req, res)=>{ 
     try {
         //console.log(req.body)
-        const { homeTeam, awayTeam, referee, date, score } = req.body;
+        const { homeTeam, awayTeam, referee, date, score, homeTeamURL, awayTeamURL } = req.body;
          
         const createdMatch = await Match.create({
             homeTeam,
             awayTeam,
             referee,
             date,
-            score
+            score,
+            homeTeamURL,
+            awayTeamURL
         })
         return res.status(201).json(createdMatch);
     } catch (error) {

@@ -12,7 +12,9 @@ export const AddMatchScreen = () => {
     awayTeam: "",
     referee: "",
     date: "",
-    score: "-"
+    score: "-",
+    homeTeamURL: "",
+    awayTeamURL:""
   });
   return (
     <Container>
@@ -73,6 +75,28 @@ export const AddMatchScreen = () => {
                 placeholder="Enter the date of the match"
               />
             </Form.Group>
+
+            <Form.Group className="mb-3" controlId="formBasichomeTeamURL">
+              <Form.Label>Home Team URL</Form.Label>
+              <Form.Control
+                onChange={(e) =>
+                  setFormData({ ...formData, homeTeamURL: e.target.value })
+                }
+                type="homeTeamURL"
+                placeholder="Enter the url of the home team logo"
+              />
+            </Form.Group>
+
+            <Form.Group className="mb-3" controlId="formBasicDate">
+              <Form.Label>Away Team URL</Form.Label>
+              <Form.Control
+                onChange={(e) =>
+                  setFormData({ ...formData, awayTeamURL: e.target.value })
+                }
+                type="awayTeamURL"
+                placeholder="Enter the url of the away team logo"
+              />
+            </Form.Group>   
 
             <Form.Group className="d-grid">
               <Button variant="primary" type="submit" className="mt-4">

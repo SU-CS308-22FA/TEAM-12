@@ -17,14 +17,12 @@ export const MatchScreen = ({user}) => {
 
     var isClicked = false
     
-    function handleClick() {
-        isClicked = !isClicked;
-    }
+    
     console.log(isClicked);
     return (
         <div>
-            {!isClicked && user?.fullname && (
-            <a href={`http://localhost:3000/matches/refVote/${id}`} user={user} match={match} className="btn btn-info" role="button" onClick={handleClick()}>Vote the Referee of the Match</a>
+            {user?.fullname && (
+            <a href={`http://localhost:3000/matches/refVote/${id}`} user={user} match={match} className="btn btn-info" role="button">Vote the Referee of the Match</a>
             )}    
             <p>&nbsp;</p> 
             <CommentSection match={match} user={user} id={id}/>
