@@ -59,12 +59,14 @@ export const VoteScreen = ({user}) => {
                 .catch((err)=> {
                 console.log(err.response.data);                                
                 })
-            }}>     
-                <Form.Group className="d-grid">
+            }}>   
+                <div class="center">
+                <Form.Group>
                     <Button type="submit" variant="secondary" size="lg">
                     Submit Rating
                     </Button>
                 </Form.Group>
+                </div>  
             </Form>
             
         </div>
