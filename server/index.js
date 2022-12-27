@@ -6,6 +6,7 @@ import cors from "cors";
 import userRouter from "./routers/userRouter.js";
 import matchRouter from "./routers/matchRouter.js";
 import refereeRouter from "./routers/refereeRouter.js";
+import teamRouter from "./routers/teamRouter.js";
 
 dotenv.config();
 
@@ -18,6 +19,8 @@ app.use(express.json());
 app.use("/matches", matchRouter);
 app.use("/users", userRouter);
 app.use("/referees", refereeRouter);
+app.use("/teams", teamRouter);
+
 app.use((req, res, next) => {
   // If no previous routes match the request, send back the React app.
   res.sendFile(__dirname + "/public/index.html"); 

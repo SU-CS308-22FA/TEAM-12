@@ -31,6 +31,7 @@ const Header = ({user, setUser}) => {
             <Nav.Link href="/matches">Fixture</Nav.Link>
             <Nav.Link href="/referees">Stats</Nav.Link>
             <Nav.Link href="/refereeProfile">Referee</Nav.Link>
+            <Nav.Link href="/teams">Teams</Nav.Link>
             <NavDropdown title="Dropdown" id="basic-nav-dropdown">
               <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
               <NavDropdown.Item href="#action/3.2">

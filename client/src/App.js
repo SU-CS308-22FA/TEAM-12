@@ -21,6 +21,8 @@ import {RefereeProfile} from './Screens/RefereeProfile';
 import { AddRefereeScreen } from './Screens/AddRefereeScreen'
 import {UserProfile} from './Screens/UserProfile'
 import {VoteScreen} from './Screens/VoteScreen'
+import {TeamScreen} from './Screens/TeamScreen'
+import {ClubsScreen} from './Screens/ClubsScreen'
 
 function App() {
   const[user,setUser] = useState(null);
@@ -46,6 +48,9 @@ function App() {
             <Route path="/referees" element={<StatsScreen/>} />
             <Route path="/refereeProfile" element={<RefereeProfile/>} />
             <Route path="/userProfile" element={<UserProfile user={user}/>} exact />
+            <Route path="/teams" element={<ClubsScreen/>} />
+            <Route path="/teams/:id" element={<TeamScreen/>} />
+
           </Routes>
         </Container>
       </main>
