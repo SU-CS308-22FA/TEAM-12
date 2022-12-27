@@ -3,7 +3,7 @@
 
 # Description:
 
-The project is a website which keeps track of matches, referees and their statistics. In the website referees' performances get evaluated with the use of statistics and the with the contribution of the users who support different teams.
+REFSTA is a website which keeps track of matches, referees and their statistics. In the website referees' performances get evaluated with the use of statistics and the with the contribution of the users who support different teams.
 
 
 # Getting Started with Create React App
