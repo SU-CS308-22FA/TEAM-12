@@ -1,9 +1,11 @@
 import Card from 'react-bootstrap/Card';
-import React, { useState } from 'react'
+import React, { useState } from 'react';
 import axios from 'axios';
 import Button from 'react-bootstrap/Button';
 import Table from 'react-bootstrap/Table';
-import { toast } from 'react-toastify'
+import { toast } from 'react-toastify';
+import * as api from '../axios/commentaxios.js';
+import { COMMENT } from '../constants/actionTypes.js';
 
 export const UserProfile = ({ user }) => {
     const [newuser, setUser] = useState({
@@ -50,6 +52,14 @@ export const UserProfile = ({ user }) => {
             theme: "colored",
             });   
     }
+
+
+   /* const getUserComments = () => {
+        axios.get(`${process.env.REACT_APP_API_URL}/matches/all/${user.fullname}`)
+        .then(response => console.log(response))
+    }
+
+    getUserComments();*/
 
     const handleChange = (e) => {
         const { name, value } = e.target
@@ -106,9 +116,8 @@ export const UserProfile = ({ user }) => {
                     </div>
                         </div>
                     </div>
-                </div>
-  ) 
-  
+                </div>         
+  )
 };
 
 
