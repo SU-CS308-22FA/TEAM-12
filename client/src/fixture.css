@@ -26,6 +26,7 @@ li .head .date {
 li .head .referee {
     align-items: center;
     color: #01d099;
+    margin-left: -90px;
 }
 
 

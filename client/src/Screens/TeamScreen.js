@@ -17,72 +17,73 @@ export const TeamScreen = () => {
     
     return (
         <div class="card-container">
-            <div class="card1">
-                <img src={team.gkLogo} alt="Avatar" width="200" height="200"></img>
-                <div class="playername">
-                <h5><b>{team.gkName}</b></h5>
-                </div>
-            </div>
-            <div class="card2">
-                <img src={team.lbLogo} alt="Avatar" width="200" height="200"></img>
-                <div class="playername">
-                <h5><b>{team.lbName}</b></h5>
-                </div>
-            </div>
-            <div class="card2">
-                <img src={team.lcbLogo} alt="Avatar" width="200" height="200"></img>
-                <div class="playername">
-                <h5><b>{team.lcbName}</b></h5>
-                </div>
-            </div>
-            <div class="card2">
-                <img src={team.rcbLogo} alt="Avatar" width="200" height="200"></img>
-                <div class="playername">
-                <h5><b>{team.rcbName}</b></h5>
-                </div>
-            </div>
-            <div class="card2">
-                <img src={team.rbLogo} alt="Avatar" width="200" height="200"></img>
-                <div class="playername">
-                <h5><b>{team.rbName}</b></h5>
-                </div>
-            </div>
-            <div class="card3">
-                <img src={team.cmLogo} alt="Avatar" width="200" height="200"></img>
-                <div class="playername">
-                <h5><b>{team.cmName}</b></h5>
-                </div>
-            </div>
-            <div class="card3">
-                <img src={team.cdmLogo} alt="Avatar" width="200" height="200"></img>
-                <div class="playername">
-                <h5><b>{team.cdmName}</b></h5>
-                </div>
-            </div>
-            <div class="card3">
-                <img src={team.camLogo} alt="Avatar" width="200" height="200"></img>
-                <div class="playername">
-                <h5><b>{team.camName}</b></h5>
-                </div>
-            </div>
             <div class="card4">
-                <img src={team.lwLogo} alt="Avatar" width="200" height="200"></img>
+                <img src={team.lwLogo} alt="Avatar" width="150" height="150"></img>
                 <div class="playername">
                 <h5><b>{team.lwName}</b></h5>
                 </div>
             </div>
             <div class="card4">
-                <img src={team.stLogo} alt="Avatar" width="200" height="200"></img>
+                <img src={team.stLogo} alt="Avatar" width="150" height="150"></img>
                 <div class="playername">
                 <h5><b>{team.stName}</b></h5>
                 </div>
             </div>
             <div class="card4">
-                <img src={team.rwLogo} alt="Avatar" width="200" height="200"></img>
+                <img src={team.rwLogo} alt="Avatar" width="150" height="150"></img>
                 <div class="playername">
                 <h5><b>{team.rwName}</b></h5>
                 </div>
             </div>
+            <div class="card3">
+                <img src={team.cmLogo} alt="Avatar" width="150" height="150"></img>
+                <div class="playername">
+                <h5><b>{team.cmName}</b></h5>
+                </div>
+            </div>
+            <div class="card3">
+                <img src={team.cdmLogo} alt="Avatar" width="150" height="150"></img>
+                <div class="playername">
+                <h5><b>{team.cdmName}</b></h5>
+                </div>
+            </div>
+            <div class="card3">
+                <img src={team.camLogo} alt="Avatar" width="150" height="150"></img>
+                <div class="playername">
+                <h5><b>{team.camName}</b></h5>
+                </div>
+            </div>
+            <div class="card2">
+                <img src={team.lbLogo} alt="Avatar" width="150" height="150"></img>
+                <div class="playername">
+                <h5><b>{team.lbName}</b></h5>
+                </div>
+            </div>
+            <div class="card2">
+                <img src={team.lcbLogo} alt="Avatar" width="150" height="150"></img>
+                <div class="playername">
+                <h5><b>{team.lcbName}</b></h5>
+                </div>
+            </div>
+            <div class="card2">
+                <img src={team.rcbLogo} alt="Avatar" width="150" height="150"></img>
+                <div class="playername">
+                <h5><b>{team.rcbName}</b></h5>
+                </div>
+            </div>
+            <div class="card2">
+                <img src={team.rbLogo} alt="Avatar" width="150" height="150"></img>
+                <div class="playername">
+                <h5><b>{team.rbName}</b></h5>
+                </div>
+            </div>
+            <div class="card1">
+                <img src={team.gkLogo} alt="Avatar" width="150" height="150"></img>
+                <div class="playername">
+                <h5><b>{team.gkName}</b></h5>
+                </div>
+            </div>
+            
         </div>
         
         
