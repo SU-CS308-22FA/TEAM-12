@@ -33,11 +33,17 @@ router.put("/editfixture/:id", async(req,res)=>{
     .catch(err=>res.status(400).json('Error: '+err))
 })
 
+router.get("/all/:name", (req, res) => {
+    //Match.find({}, {comments:1, _id:0})
+    Match.find({comments : { $exists: true, $ne: []}, comments:{'$regex' : req.params.name, '$options' : 'i'}}, {comments:1, _id:0})
+    .then(matches => res.json(matches))
+    .catch(err => res.json(err))
+})
 
 router.get('/:id', (req, res) => {
     Match.findById(req.params.id)
     .then(matches => res.json(matches))
-    .catch(err => res.json('Error: +err'))
+    .catch(err => res.json('Error:' +err))
 })
 
 router.post("/:id", commentPost);

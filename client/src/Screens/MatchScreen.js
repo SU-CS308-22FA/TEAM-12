@@ -10,6 +10,7 @@ export const MatchScreen = ({user}) => {
     const [match, setMatch] = useState({
         
     })
+    
     useEffect(() => {
         axios.get(`${process.env.REACT_APP_API_URL}/matches/${id}`)
         .then(response => setMatch(response.data))
