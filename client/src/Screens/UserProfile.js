@@ -81,7 +81,7 @@ export const UserProfile = ({ user }) => {
             const flattenComments = filteredComments.flat();
             setComments(flattenComments);
           });
-      }, []);
+      }, [user]);
 
     const handleChange = (e) => {
         const { name, value } = e.target
