@@ -4,7 +4,6 @@ import bcrypt from 'bcryptjs'
 import Match from '../models/matchModel.js';
 import { commentPost } from '../controllers/comment.js';
 import {getRating} from '../controllers/comment.js';
-import UserProfile from "../../client/src/Screens/UserProfile.js";
 
 const router = express.Router();
 
@@ -34,9 +33,9 @@ router.put("/editfixture/:id", async(req,res)=>{
     .catch(err=>res.status(400).json('Error: '+err))
 })
 
-router.get("/all", (req, res) => {
+router.get("/all/:name", (req, res) => {
     //Match.find({}, {comments:1, _id:0})
-    Match.find({comments : { $exists: true, $ne: []}, comments:{'$regex' : '^' + req.params.name, '$options' : 'i'}}, {comments:1, _id:0})
+    Match.find({comments : { $exists: true, $ne: []}, comments:{'$regex' : req.params.name, '$options' : 'i'}}, {comments:1, _id:0})
     .then(matches => res.json(matches))
     .catch(err => res.json(err))
 })

@@ -1,16 +1,19 @@
 import Card from 'react-bootstrap/Card';
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react'
 import axios from 'axios';
 import Button from 'react-bootstrap/Button';
 import Table from 'react-bootstrap/Table';
-import { toast } from 'react-toastify';
-import * as api from '../axios/commentaxios.js';
-import { COMMENT } from '../constants/actionTypes.js';
+import { toast } from 'react-toastify'
 
 export const UserProfile = ({ user }) => {
+    
+    var filteredComments = [ ]; 
+
     const [newuser, setUser] = useState({
         email: "",
     })
+    
+    const [comments, setComments] = useState(filteredComments);
     
         /**
      * This function is called when the "Update User" button is clicked. 
@@ -52,14 +55,33 @@ export const UserProfile = ({ user }) => {
             theme: "colored",
             });   
     }
+        
+        /*const getUserComments = () => {
+            axios.get(`${process.env.REACT_APP_API_URL}/matches/all/${user?.fullname}`)
+            .then(response =>
+                response.data.forEach(match => {
+                    var filteredMatch = match.comments.filter(comment => comment.includes(user?.fullname));
 
+                    filteredComments = filteredComments.concat(filteredMatch);
+                    
+                    console.log(filteredComments);
+                })
+        )
+    }*/
 
-   /* const getUserComments = () => {
-        axios.get(`${process.env.REACT_APP_API_URL}/matches/all/${user.fullname}`)
-        .then(response => console.log(response))
-    }
+    //getUserComments();
 
-    getUserComments();*/
+    useEffect(() => {
+        // Fetch the comments and update the state
+        axios.get(`${process.env.REACT_APP_API_URL}/matches/all/${user?.fullname}`)
+          .then(response => {
+            const filteredComments = response.data.map(match => {
+              return match.comments.filter(comment => comment.includes(user?.fullname));
+            });
+            const flattenComments = filteredComments.flat();
+            setComments(flattenComments);
+          });
+      }, []);
 
     const handleChange = (e) => {
         const { name, value } = e.target
@@ -71,7 +93,7 @@ export const UserProfile = ({ user }) => {
         })
     }
     return(
-    <div>
+    <div>   
         <div class='parent'>
             <div class ='col d-flex justify-content-center'>
                 <div class='child'>
@@ -114,10 +136,18 @@ export const UserProfile = ({ user }) => {
                     </div>
                         </div>
                     </div>
+                    </div>COMMENTS:<div>
+                    &nbsp;
+                    <ul>
+                    {comments.map(comment => (
+                        <li key={comment}>{comment}</li>
+                    ))}
+                    </ul>
                         </div>
                     </div>
-                </div>         
-  )
+                </div>
+  ) 
+  
 };
 
 
