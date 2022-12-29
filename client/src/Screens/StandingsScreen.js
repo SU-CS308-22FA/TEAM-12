@@ -2,6 +2,7 @@ import Table from 'react-bootstrap/Table';
 import Card from 'react-bootstrap/Card';
 import React, { useState, useEffect } from 'react'
 import axios from 'axios'
+import '../clubs.css'
 
 export const StandingsScreen = () => {
     const [standings, setStandings] = useState([ ])
@@ -29,7 +30,9 @@ export const StandingsScreen = () => {
 
                         <td>{standings.position}</td>
 
-                        <td >{standings.teamName}</td>
+                        <td ><img src={standings.teamLogo} width="40" height="40"></img> {standings.teamName} </td>
+                        
+                        
 
                         <td >{standings.wins}</td>
 
@@ -38,6 +41,7 @@ export const StandingsScreen = () => {
                         <td >{standings.losses}</td>
 
                         <td >{standings.points}</td>
+
                                     
                     </tr>
                     )}
