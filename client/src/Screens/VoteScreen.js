@@ -19,8 +19,8 @@ export const VoteScreen = ({user}) => {
         axios.get(`${process.env.REACT_APP_API_URL}/matches/${id}`)
         .then(response => setMatch(response.data))
     }, [])
-   
-
+    
+    
     return (
         <div>
             <div class="center">Vote performance of {match?.referee} for this match</div>
@@ -35,39 +35,42 @@ export const VoteScreen = ({user}) => {
                 ) 
             })}  
             </div>
-            <Form onSubmit={async (e)=>{
-                e.preventDefault()             
-
-                axios.put(`http://localhost:5000/matches/refVote/${id}`,{rating})
-
-                .then((res) => {
-                console.log(res);
-                let message = "Thank you for voting!";         
-                toast("✔️"+message,
-                {
-                    position: "top-center",
-                    autoClose: 1000,
-                    hideProgressBar: false,
-                    closeOnClick: true,
-                    pauseOnHover: true,
-                    draggable: true,
-                    progress: undefined,
-                    theme: "colored",
-                });    
-                navigate(`/matches/${id}`)
-                })
-                .catch((err)=> {
-                console.log(err.response.data);                                
-                })
-            }}>   
-                <div class="center">
-                <Form.Group>
-                    <Button type="submit" variant="secondary" size="lg">
-                    Submit Rating
-                    </Button>
-                </Form.Group>
-                </div>  
-            </Form>
+            {user?._id && (
+                <Form onSubmit={async (e)=>{
+                    e.preventDefault()             
+                    let userID = user._id;
+                    axios.put(`http://localhost:5000/matches/refVote/${id}`,{rating,userID})
+    
+                    .then((res) => {
+                    console.log(res);
+                    let message = "Thank you for voting!";         
+                    toast("✔️"+message,
+                    {
+                        position: "top-center",
+                        autoClose: 1000,
+                        hideProgressBar: false,
+                        closeOnClick: true,
+                        pauseOnHover: true,
+                        draggable: true,
+                        progress: undefined,
+                        theme: "colored",
+                    });    
+                    navigate(`/matches/${id}`)
+                    })
+                    .catch((err)=> {
+                    console.log(err.response.data);                                
+                    })
+                }}>   
+                    <div class="center">
+                    <Form.Group>
+                        <Button type="submit" variant="secondary" size="lg">
+                        Submit Rating
+                        </Button>
+                    </Form.Group>
+                    </div>  
+                </Form>
+            )}
+            
             
         </div>
         

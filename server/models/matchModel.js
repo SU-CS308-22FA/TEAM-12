@@ -41,8 +41,11 @@ const matchSchema = mongoose.Schema({
     awayTeamURL:{
         type: String,
         required:true
+    },
+    voters:{
+        type:[String],
+        default:[]
     }
-
 })
 
 export default mongoose.model('Match', matchSchema)
