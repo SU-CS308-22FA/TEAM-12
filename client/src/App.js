@@ -52,7 +52,6 @@ function App() {
             <Route path="/teams" element={<ClubsScreen/>} />
             <Route path="/teams/:id" element={<TeamScreen/>} />
             <Route path="/standings" element={<StandingsScreen/>} />
-
           </Routes>
         </Container>
       </main>
