@@ -20,7 +20,7 @@ export const getRating = async (req,res) => {
     const {rating,userID} = req.body;
     const match = await Match.findById(req.params.id);
     if(match.voters.includes(userID)){
-        res.json("User already voted!");
+        res.json({ message:'❌You have voted before!'});
     }
     else{
         let totalVote = match.voteNum;
@@ -36,7 +36,7 @@ export const getRating = async (req,res) => {
                 refRating: roundedRating,
                 voteNum: finalVoteCount,
                 voters: match.voters
-            }, {new: true}).then(() => res.json('Vote Received'));
+            }, {new: true}).then(() => res.json({ message: '✔️Thank you for voting!'}));
         }  
 }
 

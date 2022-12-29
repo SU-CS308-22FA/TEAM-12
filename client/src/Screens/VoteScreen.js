@@ -42,9 +42,8 @@ export const VoteScreen = ({user}) => {
                     axios.put(`http://localhost:5000/matches/refVote/${id}`,{rating,userID})
     
                     .then((res) => {
-                    console.log(res);
-                    let message = "Thank you for voting!";         
-                    toast("✔️"+message,
+                    console.log(res);       
+                    toast(res.data.message,
                     {
                         position: "top-center",
                         autoClose: 1000,
