@@ -2,7 +2,7 @@ import Table from 'react-bootstrap/Table';
 import Card from 'react-bootstrap/Card';
 import React, { useState, useEffect } from 'react'
 import axios from 'axios'
-import '../clubs.css'
+//import '../clubs.css'
 
 export const StandingsScreen = () => {
     const [standings, setStandings] = useState([ ])
