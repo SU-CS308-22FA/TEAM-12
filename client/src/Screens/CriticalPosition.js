@@ -8,6 +8,7 @@ import './voteScreen.css'
 import { Container, Form, Button, FormGroup, Row, Col, } from "react-bootstrap";
 import { useNavigate } from 'react-router-dom';
 import { toast } from 'react-toastify'
+import {DefaultPlayer as Video} from 'react-html5video';
 
 export const CriticalPosition = ({user}) => {
     const navigate = useNavigate();
@@ -23,6 +24,13 @@ export const CriticalPosition = ({user}) => {
     
     return (
         <div>
+            <div>
+                <div className='center'>
+                    <Video  autoPlay loop height='800' width='1000'>
+                        <source src="https://drive.google.com/uc?export=view&id=1cl6nlHCYDlAX6EYGC9D98mcjp2iHNV4z" type='video/webm'></source>
+                    </Video>
+                </div>
+            </div>
             <div class="center">Vote {match?.referee}'s decision for this critical position</div>
             <div class="center">
             {[...Array(5)].map((star,i)=>{
