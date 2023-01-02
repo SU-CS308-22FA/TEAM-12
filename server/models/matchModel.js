@@ -34,6 +34,14 @@ const matchSchema = mongoose.Schema({
         type: Number,
         default: 1
     },
+    posRating:{
+        type: Number,
+        default: 5
+    },
+    voteNumPos:{
+        type: Number,
+        default: 1
+    },
     homeTeamURL:{
         type: String,
         required:true

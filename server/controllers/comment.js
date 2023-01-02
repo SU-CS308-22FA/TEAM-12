@@ -47,9 +47,9 @@ export const getRatingPos = async (req,res) => {
         res.json({ message:'❌You have voted before!'});
     }
     else{
-        let totalVote = match.voteNum;
+        let totalVote = match.voteNumPos;
         let finalVoteCount = totalVote + 1;
-        let totalRating = match.refRating;
+        let totalRating = match.posRating;
         let calc = (totalRating * totalVote);
         let finalVote = (calc + rating);
         let finalRating = finalVote/finalVoteCount;
@@ -57,8 +57,8 @@ export const getRatingPos = async (req,res) => {
         match.voters.push(userID);
         const updatedMatch = await Match.findByIdAndUpdate(req.params.id, 
             {
-                positionRating: roundedRating,
-                voteNum: finalVoteCount,
+                posRating: roundedRating,
+                voteNumPos: finalVoteCount,
                 voters: match.voters
             }, {new: true}).then(() => res.json({ message: '✔️Thank you for voting!'}));
         }  
