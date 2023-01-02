@@ -4,6 +4,7 @@ import bcrypt from 'bcryptjs'
 import Match from '../models/matchModel.js';
 import { commentPost } from '../controllers/comment.js';
 import {getRating} from '../controllers/comment.js';
+import {getRatingPos} from '../controllers/comment.js';
 
 const router = express.Router();
 
@@ -48,5 +49,6 @@ router.get('/:id', (req, res) => {
 
 router.post("/:id", commentPost);
 router.put("/refVote/:id", getRating);
+router.put("/criticalPosition/:id", getRatingPos);
 
 export default router;

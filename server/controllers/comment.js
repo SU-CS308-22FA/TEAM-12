@@ -39,5 +39,29 @@ export const getRating = async (req,res) => {
             }, {new: true}).then(() => res.json({ message: '✔️Thank you for voting!'}));
         }  
 }
+export const getRatingPos = async (req,res) => {
+    
+    const {rating,userID} = req.body;
+    const match = await Match.findById(req.params.id);
+    if(match.voters.includes(userID)){
+        res.json({ message:'❌You have voted before!'});
+    }
+    else{
+        let totalVote = match.voteNum;
+        let finalVoteCount = totalVote + 1;
+        let totalRating = match.refRating;
+        let calc = (totalRating * totalVote);
+        let finalVote = (calc + rating);
+        let finalRating = finalVote/finalVoteCount;
+        let roundedRating = finalRating.toFixed(2);
+        match.voters.push(userID);
+        const updatedMatch = await Match.findByIdAndUpdate(req.params.id, 
+            {
+                positionRating: roundedRating,
+                voteNum: finalVoteCount,
+                voters: match.voters
+            }, {new: true}).then(() => res.json({ message: '✔️Thank you for voting!'}));
+        }  
+}
 
 export default router;

@@ -24,6 +24,7 @@ import {VoteScreen} from './Screens/VoteScreen'
 import {TeamScreen} from './Screens/TeamScreen'
 import {ClubsScreen} from './Screens/ClubsScreen'
 import {StandingsScreen} from './Screens/StandingsScreen'
+import { CriticalPosition } from './Screens/CriticalPosition';
 
 function App() {
   const[user,setUser] = useState(null);
@@ -52,6 +53,7 @@ function App() {
             <Route path="/teams" element={<ClubsScreen/>} />
             <Route path="/teams/:id" element={<TeamScreen/>} />
             <Route path="/standings" element={<StandingsScreen/>} />
+            <Route path="/matches/criticalPosition/:id" element={<CriticalPosition user={user}/>} />
           </Routes>
         </Container>
       </main>
