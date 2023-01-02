@@ -34,7 +34,7 @@ function App() {
       <main className='py-3'>
         <Container>
           <Routes>
-            <Route path="/" element={<HomeScreen user={user}/>} exact />
+            <Route path="/home" element={<HomeScreen user={user}/>} exact />
             <Route path="/signin" element={<AuthScreen setUser={setUser}/>} />
             <Route path="/signup" element={<SignUpScreen/>} />
             <Route path="/edit/:id" element={<EditScreen user={user} setUser={setUser}/>} />

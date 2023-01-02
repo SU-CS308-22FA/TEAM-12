@@ -11,8 +11,6 @@ import {
 } from "react-router-dom";
 
 
-import NavDropdown from 'react-bootstrap/NavDropdown';
-
 const Header = ({user, setUser}) => {
   useEffect(() => {
     if(localStorage.getItem('user') && !user){
@@ -22,11 +20,11 @@ const Header = ({user, setUser}) => {
   return (
     <Navbar bg="light" expand="lg">
       <Container>
-        <Navbar.Brand href="#home">REFSTA</Navbar.Brand>
+        <Navbar.Brand href="/home">REFSTA</Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto">
-            <Nav.Link href="#home">Home</Nav.Link>
+            <Nav.Link href="/home">Home</Nav.Link>
             <Nav.Link href="/UserProfile">Profile</Nav.Link>
             <Nav.Link href="/matches">Fixture</Nav.Link>
             <Nav.Link href="/referees">Stats</Nav.Link>
