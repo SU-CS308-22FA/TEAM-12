@@ -9,6 +9,7 @@ import { Container, Form, Button, FormGroup, Row, Col, } from "react-bootstrap";
 import { useNavigate } from 'react-router-dom';
 import { toast } from 'react-toastify'
 import {DefaultPlayer as Video} from 'react-html5video';
+import CommentForPos from '../Components/CommentForPos';
 
 export const CriticalPosition = ({user}) => {
     const navigate = useNavigate();
@@ -80,6 +81,7 @@ export const CriticalPosition = ({user}) => {
                     <div class ="center"><div class="live-score-detail-head_whistle-name__1rOgG">Current Critical Position Rating: {match.posRating}/5</div></div>
                 </Form>
             )}
+            <CommentForPos match={match} user={user} id={id}/>
             
             
         </div>
