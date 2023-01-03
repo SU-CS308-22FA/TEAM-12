@@ -10,3 +10,13 @@ export const commentPost = (value, id) => async (dispatch) => {
     console.log(error);
   }
 };
+
+export const commentPostForPos = (value, id) => async (dispatch) => {
+  try {
+    const { data } = await api.comment1(value, id);
+
+    return data.comments1;
+  } catch (error) {
+    console.log(error);
+  }
+};

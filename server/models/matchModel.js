@@ -26,6 +26,10 @@ const matchSchema = mongoose.Schema({
         type:[String],
         default:[]
     },
+    comments1:{
+        type:[String],
+        default:[]
+    },
     refRating:{
         type: Number,
         default: 5

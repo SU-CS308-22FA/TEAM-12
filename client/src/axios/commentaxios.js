@@ -5,3 +5,4 @@ const HTTP = axios.create({
 })
 
 export const comment = async (value,id) => await HTTP.post(`/matches/${id}`,{ value });
+export const comment1 = async (value,id) => await HTTP.post(`/matches/criticalPosition/${id}`,{ value });

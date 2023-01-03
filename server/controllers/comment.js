@@ -14,6 +14,16 @@ export const commentPost = async (req, res) => {
     const updatedMatch = await Match.findByIdAndUpdate(id, match, {new: true});
     res.json(updatedMatch);
 }
+export const commentPostForPos = async (req, res) => {
+    const {id} = req.params;
+    const {value} = req.body;
+
+    const match = await Match.findById(id);
+    match.comments1.push(value);
+
+    const updatedMatch1 = await Match.findByIdAndUpdate(id, match, {new: true});
+    res.json(updatedMatch1);
+}
 
 export const getRating = async (req,res) => {
     
