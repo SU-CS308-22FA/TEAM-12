@@ -48,7 +48,7 @@ export const CriticalPosition = ({user}) => {
                 <Form onSubmit={async (e)=>{
                     e.preventDefault()             
                     let userID = user._id;
-                    axios.put(`http://localhost:5000/matches/criticalPosition/${id}`,{rating,userID})
+                    axios.put(`${process.env.REACT_APP_API_URL}/matches/criticalPosition/${id}`,{rating,userID})
     
                     .then((res) => {
                     console.log(res);       

@@ -17,7 +17,7 @@ export const EditMatchScreen = () => {
     })
 
     useEffect(() => {
-        axios.get(`http://localhost:5000/matches/editfixture/${id}`)
+        axios.get(`${process.env.REACT_APP_API_URL}/matches/editfixture/${id}`)
         .then(response => setMatch(response.data))
     }, [])
 
@@ -26,7 +26,7 @@ export const EditMatchScreen = () => {
  * It sends the "newmatch" which is the update match to the database. 
  */
     const matchUpdate = () => {
-        axios.put(`http://localhost:5000/matches/editfixture/${id}`, newmatch)
+        axios.put(`${process.env.REACT_APP_API_URL}/matches/editfixture/${id}`, newmatch)
         .then((match) => {
             console.log(match)
             let message = " Updated Successfully";         
