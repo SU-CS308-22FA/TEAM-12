@@ -28,7 +28,7 @@ export const CriticalPosition = ({user}) => {
             <div>
                 <div className='center'>
                     <Video  autoPlay loop height='800' width='1000'>
-                        <source src="https://drive.google.com/uc?export=view&id=1cl6nlHCYDlAX6EYGC9D98mcjp2iHNV4z" type='video/webm'></source>
+                        <source src="https://drive.google.com/uc?export=view&id=1FIIILdibhlCvVJkg-43EqqBYqo-HnvYv" type='video/webm'></source>
                     </Video>
                 </div>
             </div>

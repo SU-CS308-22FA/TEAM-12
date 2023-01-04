@@ -32,7 +32,7 @@ export const StatsScreen = () => {
                 <tbody>
                     {referees.map(referee => 
                     <tr>
-                        <td key={referee._id}><Link to={`${referee._id}`}>{referee.refName} {referee.refSurname}</Link></td>
+                        <td key={referee._id}><a style={{textDecoration: 'none', color: 'white'}} ><Link style={{ textDecoration: 'none' }} to={`${referee._id}`}>{referee.refName} {referee.refSurname}</Link></a></td>
                         
                         <td >{referee.matchNum}</td>
 
